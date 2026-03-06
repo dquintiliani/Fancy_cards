@@ -73,7 +73,6 @@ body::before {
 }
 .upload-headline em { font-style: italic; font-weight: 400; color: rgba(250,220,140,0.9); }
 
-/* Saved deck banner */
 .saved-banner {
   width: 100%; background: rgba(160,210,140,0.07);
   border: 1px solid rgba(160,210,140,0.2); border-radius: 4px;
@@ -102,7 +101,6 @@ body::before {
 .banner-btn.discard { color: rgba(250,240,210,0.4); background: transparent; border: 1px solid rgba(250,240,210,0.12); }
 .banner-btn.discard:hover { color: rgba(250,240,210,0.7); border-color: rgba(250,240,210,0.28); }
 
-/* Drop zone */
 .dropzone {
   width: 100%; border: 1px dashed rgba(250,240,210,0.22); border-radius: 4px;
   padding: 44px 36px; display: flex; flex-direction: column;
@@ -115,7 +113,6 @@ body::before {
 .dz-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(250,240,210,0.5); }
 .dz-sublabel { font-size: 13px; font-weight: 300; color: rgba(250,240,210,0.28); line-height: 1.5; }
 
-/* Schema */
 .schema-block {
   width: 100%; background: rgba(255,245,215,0.04);
   border: 1px solid rgba(250,240,210,0.1); border-radius: 4px;
@@ -150,7 +147,6 @@ body::before {
   transition: background 0.2s, transform 0.1s; outline: none;
 }
 .start-btn:hover { background: rgba(250,230,160,0.98); }
-.start-btn:active { transform: translateY(1px); }
 .start-btn:disabled { opacity: 0.25; cursor: default; pointer-events: none; }
 
 /* ─────────────────────────────────────────────
@@ -179,17 +175,8 @@ body::before {
   letter-spacing: 0.15em; color: rgba(250,240,210,0.25);
 }
 
-/* Grid of paper swatches */
-.theme-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.theme-option {
-  display: flex; flex-direction: column; gap: 10px;
-  cursor: pointer;
-}
+.theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.theme-option { display: flex; flex-direction: column; gap: 10px; cursor: pointer; }
 
 .theme-card-preview {
   width: 100%; aspect-ratio: 3/2;
@@ -200,8 +187,7 @@ body::before {
      0 4px 8px rgba(0,0,0,0.22),
      0 12px 28px rgba(0,0,0,0.28);
   transition: transform 0.2s cubic-bezier(0.23,1,0.32,1), box-shadow 0.2s ease;
-  outline: 2.5px solid transparent;
-  outline-offset: 3px;
+  outline: 2.5px solid transparent; outline-offset: 3px;
 }
 .theme-option:hover .theme-card-preview {
   transform: translateY(-3px);
@@ -211,26 +197,19 @@ body::before {
      0 8px 16px rgba(0,0,0,0.28),
      0 20px 40px rgba(0,0,0,0.32);
 }
-.theme-option.selected .theme-card-preview {
-  outline-color: rgba(250,220,140,0.8);
-}
+.theme-option.selected .theme-card-preview { outline-color: rgba(250,220,140,0.8); }
 
-/* right-edge illusion on all preview cards */
 .theme-card-preview::after {
   content: ''; position: absolute;
   right: -2px; top: 2px; bottom: -2px; width: 3px;
   border-radius: 0 2px 2px 0; pointer-events: none; z-index: 20;
 }
-
-/* corner fold on all previews */
 .theme-fold {
   position: absolute; bottom: 0; right: 0;
   width: 0; height: 0; border-style: solid;
   border-width: 0 0 14px 14px;
   border-color: transparent transparent rgba(160,145,115,0.4) transparent; z-index: 15;
 }
-
-/* preview inner content */
 .theme-preview-label {
   position: absolute; top: 14px; left: 16px;
   font-family: 'DM Mono', monospace; font-size: 7px;
@@ -245,37 +224,30 @@ body::before {
   font-size: 13px; font-weight: 300; line-height: 1.4; z-index: 5;
 }
 
-/* Theme option label row */
 .theme-meta { display: flex; flex-direction: column; gap: 3px; padding: 0 2px; }
 .theme-name {
   font-family: 'DM Mono', monospace; font-size: 9.5px;
   letter-spacing: 0.14em; text-transform: uppercase;
-  color: rgba(250,240,210,0.55);
-  transition: color 0.15s;
+  color: rgba(250,240,210,0.55); transition: color 0.15s;
 }
 .theme-option.selected .theme-name { color: rgba(250,220,140,0.9); }
 .theme-option:hover .theme-name { color: rgba(250,240,210,0.8); }
 .theme-desc { font-size: 12px; font-weight: 300; color: rgba(250,240,210,0.22); }
-
-/* Selected tick */
 .theme-tick {
   display: none; width: 14px; height: 14px;
   border-radius: 50%; background: rgba(250,220,140,0.88);
   align-items: center; justify-content: center;
-  font-size: 8px; color: rgba(30,20,10,0.9);
-  flex-shrink: 0; margin-top: 1px;
+  font-size: 8px; color: rgba(30,20,10,0.9); flex-shrink: 0; margin-top: 1px;
 }
 .theme-option.selected .theme-tick { display: flex; }
 .theme-name-row { display: flex; align-items: flex-start; gap: 8px; }
 
-/* CTA row */
 .theme-cta { display: flex; align-items: center; gap: 20px; }
 .theme-confirm-btn {
   padding: 15px 52px; font-family: 'DM Mono', monospace;
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
   color: rgba(30,22,12,0.9); background: rgba(250,220,140,0.88);
-  border: none; border-radius: 2px; cursor: pointer;
-  transition: background 0.2s; outline: none;
+  border: none; border-radius: 2px; cursor: pointer; transition: background 0.2s; outline: none;
 }
 .theme-confirm-btn:hover { background: rgba(250,230,160,1); }
 .theme-back-btn {
@@ -285,15 +257,26 @@ body::before {
   cursor: pointer; outline: none; transition: color 0.2s;
 }
 .theme-back-btn:hover { color: rgba(250,240,210,0.65); }
-.theme-saved-note {
-  font-family: 'DM Mono', monospace; font-size: 8.5px;
-  letter-spacing: 0.12em; color: rgba(250,240,210,0.2);
-}
+.theme-saved-note { font-family: 'DM Mono', monospace; font-size: 8.5px; letter-spacing: 0.12em; color: rgba(250,240,210,0.2); }
 
 /* ─────────────────────────────────────────────
    STUDY SCREEN
 ───────────────────────────────────────────── */
-#studyScreen { gap: 52px; }
+#studyScreen { gap: 52px; position: relative; }
+
+/* Pile Indicators */
+.pile-indicator {
+  position: absolute;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  font-family: 'DM Mono', monospace; color: rgba(250,240,210,0.4);
+  transition: opacity 0.3s; z-index: 5;
+}
+.pile-indicator.top-right { top: 40px; right: 50px; }
+.pile-indicator.bottom-left { bottom: 40px; left: 50px; }
+.pile-icon { font-size: 20px; line-height: 1; opacity: 0.8; }
+.pile-count { font-size: 11px; letter-spacing: 0.1em; }
+.pile-indicator.top-right .pile-icon { color: rgba(160,210,140,0.8); }
+.pile-indicator.bottom-left .pile-icon { color: rgba(220,130,100,0.8); }
 
 .scene {
   perspective: 1400px; perspective-origin: 50% 40%;
@@ -311,15 +294,17 @@ body::before {
 .card-wrap.below-1 { z-index: 9; transform: rotateX(2deg) translateY(5px) translateZ(-8px) rotate(0.4deg); opacity: 0.85; }
 .card-wrap.below-2 { z-index: 8; transform: rotateX(2deg) translateY(9px) translateZ(-16px) rotate(-0.6deg); opacity: 0.6; }
 
+/* CSS-Variable Driven Exit Animation */
 .card-wrap.exiting {
   pointer-events: none; z-index: 20;
   animation: cardExit 0.55s cubic-bezier(0.4,0,0.55,1) forwards;
 }
 @keyframes cardExit {
-  0%   { transform: rotateY(0deg) rotateX(2deg) translateZ(0) translateX(0) translateY(0) rotate(0deg); opacity:1; }
-  25%  { transform: rotateY(-10deg) rotateX(8deg) translateZ(40px) translateX(10px) translateY(-22px) rotate(-1.5deg); opacity:1; }
-  100% { transform: rotateY(-18deg) rotateX(-3deg) translateZ(-20px) translateX(560px) translateY(55px) rotate(7deg); opacity:0; }
+  0%   { transform: rotateY(var(--exit-start-ry, 0deg)) rotateX(2deg) translateZ(0) translateX(0) translateY(0) rotate(0deg); opacity:1; }
+  25%  { transform: rotateY(var(--exit-mid-ry, -10deg)) rotateX(8deg) translateZ(40px) translateX(var(--exit-mid-x, 10px)) translateY(-22px) rotate(var(--exit-mid-rot, -1.5deg)); opacity:1; }
+  100% { transform: rotateY(var(--exit-end-ry, -18deg)) rotateX(-3deg) translateZ(-20px) translateX(var(--exit-x, 560px)) translateY(var(--exit-y, -100px)) rotate(var(--exit-rot, 15deg)); opacity:0; }
 }
+
 .card-wrap.entering {
   pointer-events: none; z-index: 11;
   animation: cardEnter 0.58s cubic-bezier(0.22,1,0.36,1) forwards;
@@ -330,7 +315,6 @@ body::before {
   100% { transform: rotateY(0deg) rotateX(2deg) translateZ(0px) translateX(0) translateY(0) rotate(0deg) scale(1); opacity:1; }
 }
 
-/* .face gets a --paper-theme class applied via JS */
 .face {
   position: absolute; inset: 0;
   backface-visibility: hidden; -webkit-backface-visibility: hidden;
@@ -352,119 +336,31 @@ body::before {
 .face.front { display: flex; flex-direction: column; padding: 28px 36px 24px; }
 .face.back  { transform: rotateY(180deg); display: flex; flex-direction: column; padding: 28px 36px 24px; }
 
-/* ── Theme: classic (default) ── */
-.face.theme-classic {
-  background: linear-gradient(160deg, #fdfaf3 0%, #f7f2e6 40%, #f2ead8 100%);
-  filter: url(#filter-classic);
-}
-/* ── Theme: linen ── */
-.face.theme-linen {
-  background-color: #f5f0e4;
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(180,160,120,0.07) 2px, rgba(180,160,120,0.07) 3px),
-    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(180,160,120,0.05) 2px, rgba(180,160,120,0.05) 3px),
-    linear-gradient(160deg, #faf6ec 0%, #f2ebe0 50%, #ede4d4 100%);
-}
-/* ── Theme: watercolour ── */
-.face.theme-watercolour {
-  background-color: #f8f3e8;
-  background-image:
-    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(210,195,160,0.35) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 60% at 80% 70%, rgba(200,185,145,0.25) 0%, transparent 65%),
-    radial-gradient(ellipse 80% 30% at 50% 10%, rgba(220,210,180,0.2) 0%, transparent 80%),
-    radial-gradient(ellipse 40% 50% at 10% 80%, rgba(215,200,165,0.3) 0%, transparent 60%),
-    linear-gradient(135deg, #faf6ec 0%, #f0e8d8 100%);
-  filter: url(#filter-watercolour);
-}
-/* ── Theme: newsprint ── */
-.face.theme-newsprint {
-  background-color: #e8e0c4;
-  background-image:
-    repeating-linear-gradient(92deg, transparent, transparent 1px, rgba(160,140,90,0.06) 1px, rgba(160,140,90,0.06) 2px),
-    repeating-linear-gradient(0deg, transparent, transparent 14px, rgba(140,120,70,0.04) 14px, rgba(140,120,70,0.04) 15px),
-    linear-gradient(170deg, #ede5c6 0%, #e4d9b4 55%, #ddd0a8 100%);
-  filter: url(#filter-newsprint);
-}
-.face.theme-newsprint .card-text,
-.face.theme-newsprint .card-label,
-.face.theme-newsprint .card-corner-mark,
-.face.theme-newsprint .flip-hint { color: #1a1508 !important; }
-.face.theme-newsprint .card-label { color: #4a3a18 !important; }
-/* ── Theme: vellum ── */
-.face.theme-vellum {
-  background: linear-gradient(160deg, rgba(255,255,252,0.97) 0%, rgba(248,248,242,0.95) 40%, rgba(242,242,234,0.93) 100%);
-  box-shadow:
-    inset 0 0 40px rgba(200,195,180,0.15),
-    inset 1px 1px 0 rgba(255,255,255,0.8),
-    -1px -1px 0px rgba(255,255,255,0.85),
-     1px  1px 0px rgba(100,85,60,0.18),
-     0  4px  8px rgba(0,0,0,0.14),
-     0 12px 28px rgba(0,0,0,0.2),
-     0 28px 60px rgba(0,0,0,0.24),
-     0 50px 100px rgba(0,0,0,0.12);
-  filter: url(#filter-vellum);
-}
+/* ── Themes ── */
+.face.theme-classic { background: linear-gradient(160deg, #fdfaf3 0%, #f7f2e6 40%, #f2ead8 100%); filter: url(#filter-classic); }
+.face.theme-linen { background-color: #f5f0e4; background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(180,160,120,0.07) 2px, rgba(180,160,120,0.07) 3px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(180,160,120,0.05) 2px, rgba(180,160,120,0.05) 3px), linear-gradient(160deg, #faf6ec 0%, #f2ebe0 50%, #ede4d4 100%); }
+.face.theme-watercolour { background-color: #f8f3e8; background-image: radial-gradient(ellipse 60% 40% at 20% 30%, rgba(210,195,160,0.35) 0%, transparent 70%), radial-gradient(ellipse 50% 60% at 80% 70%, rgba(200,185,145,0.25) 0%, transparent 65%), radial-gradient(ellipse 80% 30% at 50% 10%, rgba(220,210,180,0.2) 0%, transparent 80%), radial-gradient(ellipse 40% 50% at 10% 80%, rgba(215,200,165,0.3) 0%, transparent 60%), linear-gradient(135deg, #faf6ec 0%, #f0e8d8 100%); filter: url(#filter-watercolour); }
+.face.theme-newsprint { background-color: #e8e0c4; background-image: repeating-linear-gradient(92deg, transparent, transparent 1px, rgba(160,140,90,0.06) 1px, rgba(160,140,90,0.06) 2px), repeating-linear-gradient(0deg, transparent, transparent 14px, rgba(140,120,70,0.04) 14px, rgba(140,120,70,0.04) 15px), linear-gradient(170deg, #ede5c6 0%, #e4d9b4 55%, #ddd0a8 100%); filter: url(#filter-newsprint); }
+.face.theme-newsprint .card-text, .face.theme-newsprint .card-label, .face.theme-newsprint .card-corner-mark, .face.theme-newsprint .flip-hint { color: #1a1508 !important; } .face.theme-newsprint .card-label { color: #4a3a18 !important; }
+.face.theme-vellum { background: linear-gradient(160deg, rgba(255,255,252,0.97) 0%, rgba(248,248,242,0.95) 40%, rgba(242,242,234,0.93) 100%); box-shadow: inset 0 0 40px rgba(200,195,180,0.15), inset 1px 1px 0 rgba(255,255,255,0.8), -1px -1px 0px rgba(255,255,255,0.85), 1px 1px 0px rgba(100,85,60,0.18), 0 4px 8px rgba(0,0,0,0.14), 0 12px 28px rgba(0,0,0,0.2), 0 28px 60px rgba(0,0,0,0.24), 0 50px 100px rgba(0,0,0,0.12); filter: url(#filter-vellum); }
 .face.theme-vellum .card-text { color: #1a1a14 !important; }
-/* ── Theme: kraft ── */
-.face.theme-kraft {
-  background-color: #c4a56e;
-  background-image:
-    repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(100,70,30,0.04) 3px, rgba(100,70,30,0.04) 4px),
-    repeating-linear-gradient(-45deg, transparent, transparent 3px, rgba(80,55,20,0.03) 3px, rgba(80,55,20,0.03) 4px),
-    linear-gradient(160deg, #cdb07a 0%, #c0a068 40%, #b49058 100%);
-  filter: url(#filter-kraft);
-}
-.face.theme-kraft .card-text,
-.face.theme-kraft .card-label,
-.face.theme-kraft .card-corner-mark,
-.face.theme-kraft .flip-hint,
-.face.theme-kraft .rules { color: #1a0e00 !important; }
-.face.theme-kraft::after { background: linear-gradient(to right, #a88040, #8a6428); }
+.face.theme-kraft { background-color: #c4a56e; background-image: repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(100,70,30,0.04) 3px, rgba(100,70,30,0.04) 4px), repeating-linear-gradient(-45deg, transparent, transparent 3px, rgba(80,55,20,0.03) 3px, rgba(80,55,20,0.03) 4px), linear-gradient(160deg, #cdb07a 0%, #c0a068 40%, #b49058 100%); filter: url(#filter-kraft); }
+.face.theme-kraft .card-text, .face.theme-kraft .card-label, .face.theme-kraft .card-corner-mark, .face.theme-kraft .flip-hint, .face.theme-kraft .rules { color: #1a0e00 !important; } .face.theme-kraft::after { background: linear-gradient(to right, #a88040, #8a6428); }
 
-/* Ruled lines / dot grid */
-.rules {
-  position: absolute; inset: 0;
-  background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent 27px, var(--rule-line) 27px, var(--rule-line) 28px);
-  background-position: 0 52px; pointer-events: none; z-index: 1;
-}
-.dot-grid {
-  position: absolute; inset: 0;
-  background-image: radial-gradient(circle, rgba(100,85,60,0.2) 1px, transparent 1px);
-  background-size: 18px 18px; background-position: 20px 20px;
-  z-index: 1; pointer-events: none;
-}
-.card-corner-mark {
-  position: absolute; top: 14px; right: 18px;
-  font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 300;
-  color: var(--ink-light); letter-spacing: 0.12em; text-transform: uppercase;
-  z-index: 5; opacity: 0.7;
-}
+.rules { position: absolute; inset: 0; background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent 27px, var(--rule-line) 27px, var(--rule-line) 28px); background-position: 0 52px; pointer-events: none; z-index: 1; }
+.dot-grid { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(100,85,60,0.2) 1px, transparent 1px); background-size: 18px 18px; background-position: 20px 20px; z-index: 1; pointer-events: none; }
+.card-corner-mark { position: absolute; top: 14px; right: 18px; font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 300; color: var(--ink-light); letter-spacing: 0.12em; text-transform: uppercase; z-index: 5; opacity: 0.7; }
 .card-corner-mark.bottom-left { top:auto; right:auto; bottom:14px; left:18px; }
-.card-label {
-  font-family: 'DM Mono', monospace; font-size: 8.5px; font-weight: 400;
-  color: var(--ink-light); letter-spacing: 0.2em; text-transform: uppercase;
-  margin-bottom: 18px; z-index: 5; position: relative;
-}
+.card-label { font-family: 'DM Mono', monospace; font-size: 8.5px; font-weight: 400; color: var(--ink-light); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 18px; z-index: 5; position: relative; }
 .card-label::after { content: ''; display: block; margin-top: 8px; width: 28px; height: 1.5px; background: currentColor; opacity: 0.5; }
-.card-text {
-  font-size: 22px; font-weight: 300; line-height: 1.4;
-  color: var(--ink-dark); letter-spacing: -0.01em;
-  flex: 1; display: flex; align-items: center; z-index: 5; position: relative; overflow: hidden;
-}
+.card-text { font-size: 22px; font-weight: 300; line-height: 1.4; color: var(--ink-dark); letter-spacing: -0.01em; flex: 1; display: flex; align-items: center; z-index: 5; position: relative; overflow: hidden; }
 .card-text.small { font-size: 17px; line-height: 1.6; }
 .flip-hint { font-family: 'DM Mono', monospace; font-size: 8px; color: var(--ink-light); letter-spacing: 0.15em; opacity: 0.5; z-index: 5; position: relative; align-self: flex-end; }
-.corner-fold {
-  position: absolute; bottom: 0; right: 0; width: 0; height: 0; border-style: solid;
-  border-width: 0 0 18px 18px; border-color: transparent transparent rgba(180,165,135,0.35) transparent; z-index: 12;
-}
-.corner-fold::after {
-  content: ''; position: absolute; bottom: -18px; right: -1px;
-  width: 0; height: 0; border-style: solid; border-width: 18px 18px 0 0;
-  border-color: rgba(120,105,80,0.12) transparent transparent transparent;
-}
+.corner-fold { position: absolute; bottom: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 0 18px 18px; border-color: transparent transparent rgba(180,165,135,0.35) transparent; z-index: 12; }
+.corner-fold::after { content: ''; position: absolute; bottom: -18px; right: -1px; width: 0; height: 0; border-style: solid; border-width: 18px 18px 0 0; border-color: rgba(120,105,80,0.12) transparent transparent transparent; }
 
 /* Controls */
-.controls { display: flex; align-items: center; gap: 20px; }
+.controls { display: flex; align-items: center; gap: 20px; height: 44px; }
 .ctrl-btn {
   padding: 12px 30px; font-family: 'DM Mono', monospace; font-size: 10px;
   letter-spacing: 0.2em; text-transform: uppercase;
@@ -475,71 +371,50 @@ body::before {
 .ctrl-btn:hover { color: rgba(250,240,210,0.92); border-color: rgba(250,240,210,0.38); background: rgba(255,245,215,0.05); }
 .ctrl-btn:active { transform: translateY(1px); }
 .ctrl-btn:disabled { opacity: 0.2; cursor: default; pointer-events: none; }
-.ctrl-btn.next { color: rgba(250,240,210,0.8); border-color: rgba(250,240,210,0.25); }
 .ctrl-btn.restart-btn { padding: 10px 20px; font-size: 9px; color: rgba(250,240,210,0.35); border-color: rgba(250,240,210,0.1); }
-.progress { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: rgba(250,240,210,0.28); min-width: 52px; text-align: center; }
-
-/* Theme switcher button in study controls */
 .ctrl-btn.theme-btn { padding: 10px 18px; font-size: 9px; color: rgba(250,240,210,0.28); border-color: rgba(250,240,210,0.08); }
 .ctrl-btn.theme-btn:hover { color: rgba(250,240,210,0.6); border-color: rgba(250,240,210,0.2); }
 
-.done-msg { display: none; flex-direction: column; align-items: center; gap: 20px; font-size: 28px; font-weight: 300; color: rgba(250,240,210,0.7); text-align: center; }
+/* Rating controls */
+.rating-controls { display: none; align-items: center; gap: 12px; }
+.rating-btn.correct { color: #a0d28c; border-color: rgba(160,210,140,0.3); background: rgba(160,210,140,0.05); }
+.rating-btn.correct:hover { color: #b4e0a4; border-color: rgba(160,210,140,0.6); background: rgba(160,210,140,0.12); }
+.rating-btn.incorrect { color: #d28c8c; border-color: rgba(210,140,140,0.3); background: rgba(210,140,140,0.05); }
+.rating-btn.incorrect:hover { color: #e0a4a4; border-color: rgba(210,140,140,0.6); background: rgba(210,140,140,0.12); }
+
+.progress { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: rgba(250,240,210,0.28); min-width: 100px; text-align: center; }
+
+/* Completion Message */
+.done-msg { display: none; flex-direction: column; align-items: center; gap: 24px; text-align: center; }
 .done-msg.visible { display: flex; }
-.done-msg small { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,240,210,0.3); }
+.done-headline { font-size: 32px; font-weight: 300; color: rgba(250,240,210,0.85); }
+.done-stats { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(250,240,210,0.5); background: rgba(255,245,215,0.04); padding: 12px 24px; border: 1px solid rgba(250,240,210,0.1); border-radius: 4px; }
+.done-stats span.green { color: rgba(160,210,140,0.9); }
+.done-stats span.red { color: rgba(220,130,100,0.9); }
+.done-msg .start-btn { margin-top: 10px; }
 </style>
 </head>
 <body>
 
-<!-- SVG filters -->
 <svg style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="filter-classic" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.65 0.65" numOctaves="3" seed="2" result="noise"/>
-      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
-      <feBlend in="SourceGraphic" in2="gray" mode="multiply" result="blended"/>
-      <feComposite in="blended" in2="SourceGraphic" operator="in"/>
-    </filter>
-    <filter id="filter-watercolour" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.28 0.32" numOctaves="5" seed="8" result="noise"/>
-      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
-      <feBlend in="SourceGraphic" in2="gray" mode="multiply" result="blended"/>
-      <feComposite in="blended" in2="SourceGraphic" operator="in"/>
-    </filter>
-    <filter id="filter-newsprint" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="1.1 1.1" numOctaves="2" seed="5" result="noise"/>
-      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
-      <feBlend in="SourceGraphic" in2="gray" mode="multiply" result="blended"/>
-      <feComposite in="blended" in2="SourceGraphic" operator="in"/>
-    </filter>
-    <filter id="filter-vellum" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9 0.85" numOctaves="4" seed="12" result="noise"/>
-      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
-      <feComponentTransfer in="gray" result="faded"><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
-      <feBlend in="SourceGraphic" in2="faded" mode="screen" result="blended"/>
-      <feComposite in="blended" in2="SourceGraphic" operator="in"/>
-    </filter>
-    <filter id="filter-kraft" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="turbulence" baseFrequency="0.42 0.38" numOctaves="4" seed="17" result="noise"/>
-      <feColorMatrix type="matrix" values="0.3 0.2 0 0 0  0.1 0.1 0 0 0  0 0 0 0 0  0 0 0 0.6 0" in="noise" result="tinted"/>
-      <feBlend in="SourceGraphic" in2="tinted" mode="multiply" result="blended"/>
-      <feComposite in="blended" in2="SourceGraphic" operator="in"/>
-    </filter>
+    <filter id="filter-classic" x="0%" y="0%" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.65 0.65" numOctaves="3" seed="2" result="noise"/><feColorMatrix type="saturate" values="0" in="noise" result="gray"/><feBlend in="SourceGraphic" in2="gray" mode="multiply" result="blended"/><feComposite in="blended" in2="SourceGraphic" operator="in"/></filter>
+    <filter id="filter-watercolour" x="0%" y="0%" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.28 0.32" numOctaves="5" seed="8" result="noise"/><feColorMatrix type="saturate" values="0" in="noise" result="gray"/><feBlend in="SourceGraphic" in2="gray" mode="multiply" result="blended"/><feComposite in="blended" in2="SourceGraphic" operator="in"/></filter>
+    <filter id="filter-newsprint" x="0%" y="0%" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.1 1.1" numOctaves="2" seed="5" result="noise"/><feColorMatrix type="saturate" values="0" in="noise" result="gray"/><feBlend in="SourceGraphic" in2="gray" mode="multiply" result="blended"/><feComposite in="blended" in2="SourceGraphic" operator="in"/></filter>
+    <filter id="filter-vellum" x="0%" y="0%" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9 0.85" numOctaves="4" seed="12" result="noise"/><feColorMatrix type="saturate" values="0" in="noise" result="gray"/><feComponentTransfer in="gray" result="faded"><feFuncA type="linear" slope="0.4"/></feComponentTransfer><feBlend in="SourceGraphic" in2="faded" mode="screen" result="blended"/><feComposite in="blended" in2="SourceGraphic" operator="in"/></filter>
+    <filter id="filter-kraft" x="0%" y="0%" width="100%" height="100%"><feTurbulence type="turbulence" baseFrequency="0.42 0.38" numOctaves="4" seed="17" result="noise"/><feColorMatrix type="matrix" values="0.3 0.2 0 0 0  0.1 0.1 0 0 0  0 0 0 0 0  0 0 0 0.6 0" in="noise" result="tinted"/><feBlend in="SourceGraphic" in2="tinted" mode="multiply" result="blended"/><feComposite in="blended" in2="SourceGraphic" operator="in"/></filter>
   </defs>
 </svg>
 
-<!-- ══════════════════════════════════════
-     SCREEN 1: UPLOAD
-══════════════════════════════════════ -->
 <div class="screen" id="uploadScreen">
   <div class="upload-shell">
     <div style="text-align:center">
       <div class="upload-wordmark">Flashcard Studio</div>
       <h1 class="upload-headline">Drop your deck.<br><em>Study anything.</em></h1>
     </div>
-
     <div class="saved-banner" id="savedBanner" style="display:none">
       <div class="saved-banner-left">
-        <span class="saved-banner-tag">Saved deck</span>
+        <span class="saved-banner-tag" id="savedTag">Saved deck</span>
         <span class="saved-banner-info" id="savedInfo"></span>
         <span class="saved-banner-date" id="savedDate"></span>
       </div>
@@ -548,25 +423,18 @@ body::before {
         <button class="banner-btn discard" id="discardBtn">Replace</button>
       </div>
     </div>
-
     <div class="dropzone" id="dropzone">
       <input type="file" id="fileInput" accept=".csv,.xlsx,.xls">
-      <svg class="dz-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="6" y="4" width="22" height="28" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-        <rect x="12" y="10" width="16" height="28" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-        <path d="M20 22v-8M17 17l3-3 3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-      </svg>
+      <svg class="dz-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="22" height="28" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.6"/><rect x="12" y="10" width="16" height="28" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.4"/><path d="M20 22v-8M17 17l3-3 3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></svg>
       <span class="dz-label">Drop CSV or Excel file here</span>
       <span class="dz-sublabel">or click to browse &middot; max 50 cards</span>
     </div>
-
     <div class="schema-block">
       <div class="schema-title">Required column headers</div>
       <div class="schema-row"><span class="schema-col">id</span><span class="schema-desc">Number 1&ndash;50, unique per row</span></div>
       <div class="schema-row"><span class="schema-col">front</span><span class="schema-desc">Text shown on the front of the card</span></div>
       <div class="schema-row"><span class="schema-col">back</span><span class="schema-desc">Text revealed when card is flipped</span></div>
     </div>
-
     <div class="parse-status" id="parseStatus"></div>
     <div class="preview-wrap" id="previewWrap" style="display:none">
       <table class="preview-table">
@@ -574,14 +442,10 @@ body::before {
         <tbody id="previewBody"></tbody>
       </table>
     </div>
-
     <button class="start-btn" id="startBtn" disabled>Choose a card style &#x2192;</button>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     SCREEN 2: THEME PICKER
-══════════════════════════════════════ -->
 <div class="screen hidden" id="themeScreen">
   <div class="theme-shell">
     <div class="theme-header">
@@ -589,11 +453,7 @@ body::before {
       <h2 class="theme-headline">Pick your <em>paper.</em></h2>
       <div class="theme-sub">Saved as your default &middot; change anytime during practice</div>
     </div>
-
-    <div class="theme-grid" id="themeGrid">
-      <!-- Injected by JS -->
-    </div>
-
+    <div class="theme-grid" id="themeGrid"></div>
     <div class="theme-cta">
       <button class="theme-confirm-btn" id="themeConfirmBtn">Start Studying &#x2192;</button>
       <button class="theme-back-btn" id="themeBackBtn">&#x2190; Back</button>
@@ -602,190 +462,115 @@ body::before {
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     SCREEN 3: STUDY
-══════════════════════════════════════ -->
 <div class="screen hidden" id="studyScreen">
-  <div class="scene" id="scene"></div>
-  <div class="done-msg" id="doneMsg">
-    <span>That's the whole deck.</span>
-    <small>All cards reviewed</small>
+  <div class="pile-indicator top-right" id="correctPileInd" style="opacity: 0;">
+    <span class="pile-icon">&#x2713;</span>
+    <span class="pile-count" id="correctCount">0</span>
   </div>
+  <div class="pile-indicator bottom-left" id="retryPileInd" style="opacity: 0;">
+    <span class="pile-icon">&#x21BA;</span>
+    <span class="pile-count" id="retryCount">0</span>
+  </div>
+
+  <div class="scene" id="scene"></div>
+
+  <div class="done-msg" id="doneMsg">
+    <div class="done-headline">Session Complete</div>
+    <div class="done-stats" id="doneStats"></div>
+    <button class="start-btn" id="continueReviewBtn">Review incorrect cards &#x2192;</button>
+  </div>
+
   <div class="controls" id="controls">
     <button class="ctrl-btn restart-btn" id="restartBtn">&#x21A9; New Deck</button>
-    <button class="ctrl-btn" id="flipBtn">Flip Card</button>
+    <button class="ctrl-btn" id="flipBtn">Reveal Answer</button>
+    <div class="rating-controls" id="ratingControls">
+      <button class="ctrl-btn rating-btn incorrect" id="reviewBtn">&#x2717; Review again</button>
+      <button class="ctrl-btn rating-btn correct" id="gotItBtn">&#x2713; Got it</button>
+    </div>
     <span class="progress" id="progress"></span>
-    <button class="ctrl-btn next" id="nextBtn">Next &#x2192;</button>
     <button class="ctrl-btn theme-btn" id="changeThemeBtn">&#x25A1; Paper</button>
   </div>
 </div>
 
 <script>
 /* ════════════════════════════════════════
-   THEMES
+   THEMES (Unchanged)
 ════════════════════════════════════════ */
 const THEMES = [
-  {
-    id: 'classic',
-    name: 'Classic',
-    desc: 'Warm fractal grain, multiply blend',
-    bg: 'linear-gradient(160deg, #fdfaf3 0%, #f7f2e6 40%, #f2ead8 100%)',
-    inkDark: '#1a1510', inkLabel: '#8a7a62',
-    edgeLeft: '#e8e0cc', edgeRight: '#c9bfa3',
-  },
-  {
-    id: 'linen',
-    name: 'Fine Linen',
-    desc: 'CSS woven weave, no filter',
-    bg: `linear-gradient(160deg, #faf6ec 0%, #f2ebe0 50%, #ede4d4 100%)`,
-    inkDark: '#1a1510', inkLabel: '#8a7a62',
-    edgeLeft: '#e0d8c0', edgeRight: '#c8beaa',
-  },
-  {
-    id: 'watercolour',
-    name: 'Watercolour',
-    desc: 'Low-frequency noise, blotchy patches',
-    bg: 'linear-gradient(135deg, #faf6ec 0%, #f0e8d8 100%)',
-    inkDark: '#1a1510', inkLabel: '#8a7a62',
-    edgeLeft: '#e0d8c0', edgeRight: '#c8beaa',
-  },
-  {
-    id: 'newsprint',
-    name: 'Newsprint',
-    desc: 'Fine high-freq grain, aged amber tone',
-    bg: 'linear-gradient(170deg, #ede5c6 0%, #e4d9b4 55%, #ddd0a8 100%)',
-    inkDark: '#1a1508', inkLabel: '#4a3a18',
-    edgeLeft: '#cfc090', edgeRight: '#b0a070',
-  },
-  {
-    id: 'vellum',
-    name: 'Vellum',
-    desc: 'Screen blend, near-translucent feel',
-    bg: 'linear-gradient(160deg, rgba(255,255,252,0.97) 0%, rgba(248,248,242,0.95) 40%, rgba(242,242,234,0.93) 100%)',
-    inkDark: '#1a1a14', inkLabel: '#5a5a48',
-    edgeLeft: '#e0e0d8', edgeRight: '#c8c8c0',
-  },
-  {
-    id: 'kraft',
-    name: 'Kraft',
-    desc: 'Brown bag texture, turbulence filter',
-    bg: 'linear-gradient(160deg, #cdb07a 0%, #c0a068 40%, #b49058 100%)',
-    inkDark: '#1a0e00', inkLabel: '#3a2200',
-    edgeLeft: '#a88040', edgeRight: '#8a6428',
-  },
+  { id: 'classic', name: 'Classic', desc: 'Warm fractal grain, multiply blend', bg: 'linear-gradient(160deg, #fdfaf3 0%, #f7f2e6 40%, #f2ead8 100%)', inkDark: '#1a1510', inkLabel: '#8a7a62', edgeLeft: '#e8e0cc', edgeRight: '#c9bfa3' },
+  { id: 'linen', name: 'Fine Linen', desc: 'CSS woven weave, no filter', bg: `linear-gradient(160deg, #faf6ec 0%, #f2ebe0 50%, #ede4d4 100%)`, inkDark: '#1a1510', inkLabel: '#8a7a62', edgeLeft: '#e0d8c0', edgeRight: '#c8beaa' },
+  { id: 'watercolour', name: 'Watercolour', desc: 'Low-frequency noise, blotchy patches', bg: 'linear-gradient(135deg, #faf6ec 0%, #f0e8d8 100%)', inkDark: '#1a1510', inkLabel: '#8a7a62', edgeLeft: '#e0d8c0', edgeRight: '#c8beaa' },
+  { id: 'newsprint', name: 'Newsprint', desc: 'Fine high-freq grain, aged amber tone', bg: 'linear-gradient(170deg, #ede5c6 0%, #e4d9b4 55%, #ddd0a8 100%)', inkDark: '#1a1508', inkLabel: '#4a3a18', edgeLeft: '#cfc090', edgeRight: '#b0a070' },
+  { id: 'vellum', name: 'Vellum', desc: 'Screen blend, near-translucent feel', bg: 'linear-gradient(160deg, rgba(255,255,252,0.97) 0%, rgba(248,248,242,0.95) 40%, rgba(242,242,234,0.93) 100%)', inkDark: '#1a1a14', inkLabel: '#5a5a48', edgeLeft: '#e0e0d8', edgeRight: '#c8c8c0' },
+  { id: 'kraft', name: 'Kraft', desc: 'Brown bag texture, turbulence filter', bg: 'linear-gradient(160deg, #cdb07a 0%, #c0a068 40%, #b49058 100%)', inkDark: '#1a0e00', inkLabel: '#3a2200', edgeLeft: '#a88040', edgeRight: '#8a6428' },
 ];
 
 const THEME_KEY = 'flashcard_theme';
-
-function themeSave(id) {
-  try { localStorage.setItem(THEME_KEY, id); } catch(e) {}
-}
-function themeLoad() {
-  try { return localStorage.getItem(THEME_KEY) || 'classic'; } catch(e) { return 'classic'; }
-}
+function themeSave(id) { try { localStorage.setItem(THEME_KEY, id); } catch(e) {} }
+function themeLoad() { try { return localStorage.getItem(THEME_KEY) || 'classic'; } catch(e) { return 'classic'; } }
 
 let activeTheme = themeLoad();
-
 function applyTheme(themeId) {
   activeTheme = themeId;
-  // Re-render cards if study is active
-  if (!document.getElementById('studyScreen').classList.contains('hidden') && CARDS.length) {
-    render();
-  }
+  if (!document.getElementById('studyScreen').classList.contains('hidden') && CARDS.length) render();
 }
 
-/* ════════════════════════════════════════
-   BUILD THEME GRID
-════════════════════════════════════════ */
-const themeGrid = document.getElementById('themeGrid');
+function buildPreviewStyle(t) {
+  const filterMap = { classic: 'url(#filter-classic)', watercolour: 'url(#filter-watercolour)', newsprint: 'url(#filter-newsprint)', vellum: 'url(#filter-vellum)', kraft: 'url(#filter-kraft)' };
+  const linenOverlay = t.id === 'linen' ? `repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(180,160,120,0.07) 2px, rgba(180,160,120,0.07) 3px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(180,160,120,0.05) 2px, rgba(180,160,120,0.05) 3px),` : '';
+  const newsprintOverlay = t.id === 'newsprint' ? `repeating-linear-gradient(92deg, transparent, transparent 1px, rgba(160,140,90,0.06) 1px, rgba(160,140,90,0.06) 2px), repeating-linear-gradient(0deg, transparent, transparent 14px, rgba(140,120,70,0.04) 14px, rgba(140,120,70,0.04) 15px),` : '';
+  const wcoOverlay = t.id === 'watercolour' ? `radial-gradient(ellipse 60% 40% at 20% 30%, rgba(210,195,160,0.35) 0%, transparent 70%), radial-gradient(ellipse 50% 60% at 80% 70%, rgba(200,185,145,0.25) 0%, transparent 65%),` : '';
+  const kraftOverlay = t.id === 'kraft' ? `repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(100,70,30,0.04) 3px, rgba(100,70,30,0.04) 4px), repeating-linear-gradient(-45deg, transparent, transparent 3px, rgba(80,55,20,0.03) 3px, rgba(80,55,20,0.03) 4px),` : '';
+  const vellumExtra = t.id === 'vellum' ? 'box-shadow: inset 0 0 30px rgba(200,195,180,0.15), -1px -1px 0 rgba(255,255,255,0.85), 1px 1px 0 rgba(100,85,60,0.18), 0 4px 8px rgba(0,0,0,0.12), 0 12px 28px rgba(0,0,0,0.18);' : '';
+  const bgImage = linenOverlay + newsprintOverlay + wcoOverlay + kraftOverlay + t.bg;
+  const filter = filterMap[t.id] ? `filter: ${filterMap[t.id]};` : '';
+  const edgeStyle = `border-right: 3px solid ${t.edgeRight};`;
+  return { card: `background: ${bgImage}; ${filter} ${vellumExtra} ${edgeStyle}`, overlay: 'display:none' };
+}
 
 function buildThemeGrid() {
-  themeGrid.innerHTML = '';
+  const grid = document.getElementById('themeGrid'); grid.innerHTML = '';
   THEMES.forEach(t => {
     const opt = document.createElement('div');
     opt.className = 'theme-option' + (t.id === activeTheme ? ' selected' : '');
     opt.dataset.themeId = t.id;
-
-    // Build preview card inline styles per theme
     const previewStyles = buildPreviewStyle(t);
-
-    opt.innerHTML = `
-      <div class="theme-card-preview" style="${previewStyles.card}">
-        <div style="${previewStyles.overlay}"></div>
-        <div class="theme-preview-label" style="color:${t.inkLabel}">Question</div>
-        <div class="theme-preview-text" style="color:${t.inkDark}; font-family:'Crimson Pro',serif; font-weight:300;">
-          What is the powerhouse of the cell?
-        </div>
-        <div class="theme-fold"></div>
-      </div>
-      <div class="theme-meta">
-        <div class="theme-name-row">
-          <div class="theme-name">${t.name}</div>
-          <div class="theme-tick">&#x2713;</div>
-        </div>
-        <div class="theme-desc">${t.desc}</div>
-      </div>`;
-
+    opt.innerHTML = `<div class="theme-card-preview" style="${previewStyles.card}"><div style="${previewStyles.overlay}"></div><div class="theme-preview-label" style="color:${t.inkLabel}">Question</div><div class="theme-preview-text" style="color:${t.inkDark}; font-family:'Crimson Pro',serif; font-weight:300;">What is the powerhouse of the cell?</div><div class="theme-fold"></div></div><div class="theme-meta"><div class="theme-name-row"><div class="theme-name">${t.name}</div><div class="theme-tick">&#x2713;</div></div><div class="theme-desc">${t.desc}</div></div>`;
     opt.addEventListener('click', () => selectTheme(t.id));
-    themeGrid.appendChild(opt);
+    grid.appendChild(opt);
   });
-}
-
-function buildPreviewStyle(t) {
-  const filterMap = {
-    classic: 'url(#filter-classic)',
-    watercolour: 'url(#filter-watercolour)',
-    newsprint: 'url(#filter-newsprint)',
-    vellum: 'url(#filter-vellum)',
-    kraft: 'url(#filter-kraft)',
-  };
-
-  const linenOverlay = t.id === 'linen' ? `
-    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(180,160,120,0.07) 2px, rgba(180,160,120,0.07) 3px),
-    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(180,160,120,0.05) 2px, rgba(180,160,120,0.05) 3px),` : '';
-
-  const newsprintOverlay = t.id === 'newsprint' ? `
-    repeating-linear-gradient(92deg, transparent, transparent 1px, rgba(160,140,90,0.06) 1px, rgba(160,140,90,0.06) 2px),
-    repeating-linear-gradient(0deg, transparent, transparent 14px, rgba(140,120,70,0.04) 14px, rgba(140,120,70,0.04) 15px),` : '';
-
-  const wcoOverlay = t.id === 'watercolour' ? `
-    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(210,195,160,0.35) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 60% at 80% 70%, rgba(200,185,145,0.25) 0%, transparent 65%),` : '';
-
-  const kraftOverlay = t.id === 'kraft' ? `
-    repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(100,70,30,0.04) 3px, rgba(100,70,30,0.04) 4px),
-    repeating-linear-gradient(-45deg, transparent, transparent 3px, rgba(80,55,20,0.03) 3px, rgba(80,55,20,0.03) 4px),` : '';
-
-  const vellumExtra = t.id === 'vellum'
-    ? 'box-shadow: inset 0 0 30px rgba(200,195,180,0.15), -1px -1px 0 rgba(255,255,255,0.85), 1px 1px 0 rgba(100,85,60,0.18), 0 4px 8px rgba(0,0,0,0.12), 0 12px 28px rgba(0,0,0,0.18);'
-    : '';
-
-  const bgImage = linenOverlay + newsprintOverlay + wcoOverlay + kraftOverlay + t.bg;
-  const filter = filterMap[t.id] ? `filter: ${filterMap[t.id]};` : '';
-  const edgeStyle = `border-right: 3px solid ${t.edgeRight};`;
-
-  return {
-    card: `background: ${bgImage}; ${filter} ${vellumExtra} ${edgeStyle}`,
-    overlay: 'display:none'
-  };
 }
 
 function selectTheme(id) {
   activeTheme = id;
-  document.querySelectorAll('.theme-option').forEach(el => {
-    el.classList.toggle('selected', el.dataset.themeId === id);
-  });
+  document.querySelectorAll('.theme-option').forEach(el => el.classList.toggle('selected', el.dataset.themeId === id));
   document.getElementById('themeSavedNote').textContent = '';
 }
 
 /* ════════════════════════════════════════
-   LOCAL STORAGE — DECK
+   LOCAL STORAGE & STATE
 ════════════════════════════════════════ */
 const STORAGE_KEY = 'flashcard_deck';
+let CARDS = [];
+let reviewQueue = []; // array of card indices
+let correctPile = [];
+let retryPile = [];
 
-function storageSave(cards) {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ uploadedAt: new Date().toISOString(), cards })); } catch(e) {}
+function storageSaveInitial(cards) {
+  const data = { uploadedAt: new Date().toISOString(), cards, reviewQueue: cards.map((_,i)=>i), correctPile: [], retryPile: [] };
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
 }
+
+function storageSaveSession() {
+  const saved = storageLoad();
+  if (saved) {
+    saved.reviewQueue = reviewQueue;
+    saved.correctPile = correctPile;
+    saved.retryPile = retryPile;
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(saved)); } catch(e) {}
+  }
+}
+
 function storageLoad() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -806,24 +591,9 @@ function formatDate(iso) {
 /* ════════════════════════════════════════
    PARSE & VALIDATE
 ════════════════════════════════════════ */
-let CARDS = [];
+const fileInput = document.getElementById('fileInput'), dropzone = document.getElementById('dropzone'), parseStatus = document.getElementById('parseStatus'), previewWrap = document.getElementById('previewWrap'), previewBody = document.getElementById('previewBody'), startBtn = document.getElementById('startBtn'), savedBanner = document.getElementById('savedBanner'), savedInfo = document.getElementById('savedInfo'), savedDate = document.getElementById('savedDate'), resumeBtn = document.getElementById('resumeBtn'), discardBtn = document.getElementById('discardBtn');
 
-const fileInput   = document.getElementById('fileInput');
-const dropzone    = document.getElementById('dropzone');
-const parseStatus = document.getElementById('parseStatus');
-const previewWrap = document.getElementById('previewWrap');
-const previewBody = document.getElementById('previewBody');
-const startBtn    = document.getElementById('startBtn');
-const savedBanner = document.getElementById('savedBanner');
-const savedInfo   = document.getElementById('savedInfo');
-const savedDate   = document.getElementById('savedDate');
-const resumeBtn   = document.getElementById('resumeBtn');
-const discardBtn  = document.getElementById('discardBtn');
-
-function setStatus(msg, type) {
-  parseStatus.textContent = msg;
-  parseStatus.className = 'parse-status ' + (type||'');
-}
+function setStatus(msg, type) { parseStatus.textContent = msg; parseStatus.className = 'parse-status ' + (type||''); }
 function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 function parseFile(file) {
@@ -860,8 +630,7 @@ function parseFile(file) {
       previewBody.innerHTML = valid.map(r=>`<tr><td>${r.id}</td><td>${esc(r.front.length>40?r.front.slice(0,40)+'...':r.front)}</td><td>${esc(r.back.length>40?r.back.slice(0,40)+'...':r.back)}</td></tr>`).join('');
       previewWrap.style.display='block';
 
-      const warn = errors.length ? ` (${errors.length} skipped)` : '';
-      setStatus('\u2713 '+valid.length+' card'+(valid.length>1?'s':'')+' ready'+warn, 'ok');
+      setStatus('\u2713 '+valid.length+' card'+(valid.length>1?'s':'')+' ready', 'ok');
       CARDS = valid;
       startBtn.disabled = false;
     } catch(err) { setStatus('Could not parse file: '+err.message,'err'); }
@@ -870,8 +639,8 @@ function parseFile(file) {
 }
 
 fileInput.addEventListener('change', () => parseFile(fileInput.files[0]));
-dropzone.addEventListener('dragover',  e => { e.preventDefault(); dropzone.classList.add('drag-over'); });
-dropzone.addEventListener('dragleave', ()  => dropzone.classList.remove('drag-over'));
+dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('drag-over'); });
+dropzone.addEventListener('dragleave', () => dropzone.classList.remove('drag-over'));
 dropzone.addEventListener('drop', e => { e.preventDefault(); dropzone.classList.remove('drag-over'); const f=e.dataTransfer.files[0]; if(f){fileInput.value='';parseFile(f);} });
 
 /* ════════════════════════════════════════
@@ -882,52 +651,21 @@ function showScreen(id) {
   document.getElementById(id).classList.remove('hidden');
 }
 
-// Upload → Theme picker
 startBtn.addEventListener('click', () => {
-  storageSave(CARDS);
+  storageSaveInitial(CARDS);
   buildThemeGrid();
   document.getElementById('themeSavedNote').textContent = '';
   showScreen('themeScreen');
 });
 
-// Resume saved deck → Theme picker
 resumeBtn.addEventListener('click', () => {
   buildThemeGrid();
-  // Show existing saved theme note
-  const note = document.getElementById('themeSavedNote');
   const existing = THEMES.find(t=>t.id===activeTheme);
-  note.textContent = existing ? 'Current: ' + existing.name : '';
+  document.getElementById('themeSavedNote').textContent = existing ? 'Current: ' + existing.name : '';
   showScreen('themeScreen');
 });
 
-// Theme back → Upload
 document.getElementById('themeBackBtn').addEventListener('click', () => showScreen('uploadScreen'));
-
-// Theme confirm → Study
-document.getElementById('themeConfirmBtn').addEventListener('click', () => {
-  themeSave(activeTheme);
-  showScreen('studyScreen');
-  initStudy();
-});
-
-// Change theme from study controls → Theme picker (without re-uploading)
-document.getElementById('changeThemeBtn').addEventListener('click', () => {
-  buildThemeGrid();
-  const note = document.getElementById('themeSavedNote');
-  const existing = THEMES.find(t=>t.id===activeTheme);
-  note.textContent = existing ? 'Current: ' + existing.name : '';
-  showScreen('themeScreen');
-  // Override confirm to go back to study (not re-init)
-  const confirmBtn = document.getElementById('themeConfirmBtn');
-  confirmBtn.onclick = () => {
-    themeSave(activeTheme);
-    applyTheme(activeTheme);
-    showScreen('studyScreen');
-    // restore default handler
-    confirmBtn.onclick = null;
-    confirmBtn.addEventListener('click', defaultConfirmHandler);
-  };
-});
 
 function defaultConfirmHandler() {
   themeSave(activeTheme);
@@ -936,52 +674,81 @@ function defaultConfirmHandler() {
 }
 document.getElementById('themeConfirmBtn').addEventListener('click', defaultConfirmHandler);
 
-// Discard saved deck
-discardBtn.addEventListener('click', () => {
-  storageClear(); savedBanner.style.display='none'; resetUploadUI();
+document.getElementById('changeThemeBtn').addEventListener('click', () => {
+  buildThemeGrid();
+  const existing = THEMES.find(t=>t.id===activeTheme);
+  document.getElementById('themeSavedNote').textContent = existing ? 'Current: ' + existing.name : '';
+  showScreen('themeScreen');
+  const confirmBtn = document.getElementById('themeConfirmBtn');
+  confirmBtn.onclick = () => {
+    themeSave(activeTheme); applyTheme(activeTheme); showScreen('studyScreen');
+    confirmBtn.onclick = null; confirmBtn.addEventListener('click', defaultConfirmHandler);
+  };
 });
 
-// New deck from study
-document.getElementById('restartBtn').addEventListener('click', () => {
-  storageClear();
-  showScreen('uploadScreen');
-  resetUploadUI();
-});
+discardBtn.addEventListener('click', () => { storageClear(); savedBanner.style.display='none'; resetUploadUI(); });
+document.getElementById('restartBtn').addEventListener('click', () => { storageClear(); showScreen('uploadScreen'); resetUploadUI(); });
 
-function resetUploadUI() {
-  CARDS=[]; fileInput.value=''; setStatus('',''); previewWrap.style.display='none'; startBtn.disabled=true;
-  checkSavedDeck();
-}
+function resetUploadUI() { CARDS=[]; fileInput.value=''; setStatus('',''); previewWrap.style.display='none'; startBtn.disabled=true; checkSavedDeck(); }
 
 function checkSavedDeck() {
   const saved = storageLoad();
   if (saved) {
     CARDS = saved.cards;
-    savedInfo.textContent = saved.cards.length+' card'+(saved.cards.length>1?'s':'')+' saved';
+    const isComplete = saved.reviewQueue && saved.reviewQueue.length === 0 && saved.retryPile && saved.retryPile.length === 0;
+    document.getElementById('savedTag').textContent = isComplete ? 'Completed deck' : 'Session in progress';
+    
+    let infoStr = saved.cards.length+' cards';
+    if (saved.correctPile && saved.correctPile.length > 0) infoStr += ` · ${saved.correctPile.length} mastered`;
+    
+    savedInfo.textContent = infoStr;
     savedDate.textContent = formatDate(saved.uploadedAt);
     savedBanner.style.display = 'flex';
   } else {
     savedBanner.style.display = 'none';
   }
 }
-
 checkSavedDeck();
 
 /* ════════════════════════════════════════
-   STUDY ENGINE
+   ACTIVE RECALL / STUDY ENGINE
 ════════════════════════════════════════ */
-const scene      = document.getElementById('scene');
-const flipBtn    = document.getElementById('flipBtn');
-const nextBtn    = document.getElementById('nextBtn');
+const scene = document.getElementById('scene');
+const flipBtn = document.getElementById('flipBtn');
+const ratingControls = document.getElementById('ratingControls');
 const progressEl = document.getElementById('progress');
-const doneMsg    = document.getElementById('doneMsg');
+const doneMsg = document.getElementById('doneMsg');
+const correctCountEl = document.getElementById('correctCount');
+const retryCountEl = document.getElementById('retryCount');
+const correctPileInd = document.getElementById('correctPileInd');
+const retryPileInd = document.getElementById('retryPileInd');
 
-let current=0, flipped=false, animating=false;
+let flipped=false, animating=false;
 
 function initStudy() {
-  current=0; flipped=false; animating=false;
+  const saved = storageLoad();
+  if (saved && saved.reviewQueue) {
+    reviewQueue = saved.reviewQueue;
+    correctPile = saved.correctPile || [];
+    retryPile = saved.retryPile || [];
+  } else {
+    reviewQueue = CARDS.map((_, i) => i);
+    correctPile = [];
+    retryPile = [];
+  }
+  
+  // If resumed a completed session, reset it automatically
+  if (reviewQueue.length === 0 && retryPile.length === 0) {
+     reviewQueue = CARDS.map((_, i) => i);
+     correctPile = [];
+     storageSaveSession();
+  }
+
+  flipped=false; animating=false;
   doneMsg.classList.remove('visible');
   scene.style.display='';
+  document.getElementById('controls').style.display='flex';
+  
   render();
 }
 
@@ -1016,9 +783,9 @@ function buildCardWrap(idx, cls) {
 function render() {
   scene.innerHTML='';
   for (let offset=2;offset>=0;offset--) {
-    const idx=current+offset;
-    if (idx<CARDS.length) {
-      const cls=offset===2?'active':offset===1?'below-1':'below-2';
+    if (offset < reviewQueue.length) {
+      const idx = reviewQueue[offset];
+      const cls = offset===0?'active':offset===1?'below-1':'below-2';
       scene.appendChild(buildCardWrap(idx,cls));
     }
   }
@@ -1028,65 +795,124 @@ function render() {
 function bindActiveClick() { const a=scene.querySelector('.card-wrap.active'); if(a) a.addEventListener('click',doFlip); }
 
 function updateUI() {
-  progressEl.textContent=`${Math.min(current+1,CARDS.length)} / ${CARDS.length}`;
-  flipBtn.textContent=flipped?'Flip Back':'Flip Card';
-  nextBtn.disabled=animating||current>=CARDS.length-1;
-  flipBtn.disabled=animating;
+  progressEl.textContent = `Remaining: ${reviewQueue.length}`;
+  correctCountEl.textContent = correctPile.length;
+  retryCountEl.textContent = retryPile.length;
+  
+  correctPileInd.style.opacity = correctPile.length > 0 ? '1' : '0';
+  retryPileInd.style.opacity = retryPile.length > 0 ? '1' : '0';
+
+  if (flipped) {
+    flipBtn.style.display = 'none';
+    ratingControls.style.display = 'flex';
+  } else {
+    flipBtn.style.display = 'block';
+    ratingControls.style.display = 'none';
+  }
 }
 
 function doFlip() {
-  if (animating) return;
-  flipped=!flipped;
-  const active=scene.querySelector('.card-wrap.active');
+  if (animating || reviewQueue.length === 0) return;
+  flipped = !flipped;
+  const active = scene.querySelector('.card-wrap.active');
   if (!active) return;
-  active.style.transition='transform 0.65s cubic-bezier(0.23,1,0.32,1)';
-  active.style.transform=`rotateY(${flipped?180:0}deg) rotateX(2deg)`;
-  flipBtn.textContent=flipped?'Flip Back':'Flip Card';
+  active.style.transition = 'transform 0.65s cubic-bezier(0.23,1,0.32,1)';
+  active.style.transform = `rotateY(${flipped?180:0}deg) rotateX(2deg)`;
+  updateUI();
 }
 
-function doNext() {
-  if (animating||current>=CARDS.length-1) return;
-  animating=true; flipped=false; updateUI();
+function doRate(isCorrect) {
+  if (animating || reviewQueue.length === 0) return;
+  animating = true;
 
-  const active=scene.querySelector('.card-wrap.active');
-  const b1=scene.querySelector('.card-wrap.below-1');
-  const b2=scene.querySelector('.card-wrap.below-2');
+  const activeId = reviewQueue.shift(); 
+  if (isCorrect) correctPile.push(activeId);
+  else retryPile.push(activeId);
+
+  storageSaveSession();
+  updateUI();
+
+  const active = scene.querySelector('.card-wrap.active');
+  const b1 = scene.querySelector('.card-wrap.below-1');
+  const b2 = scene.querySelector('.card-wrap.below-2');
 
   if (active) {
-    active.style.transition='none'; active.style.transform='rotateY(0deg) rotateX(2deg)';
-    void active.offsetWidth;
-    active.classList.replace('active','exiting');
-    active.addEventListener('animationend',()=>active.remove(),{once:true});
+    // Set variables for exit animation path
+    active.style.setProperty('--exit-x', isCorrect ? '500px' : '-500px');
+    active.style.setProperty('--exit-y', isCorrect ? '-400px' : '400px');
+    active.style.setProperty('--exit-rot', isCorrect ? '20deg' : '-20deg');
+    active.style.setProperty('--exit-start-ry', flipped ? '180deg' : '0deg');
+    
+    active.style.transition = 'none';
+    void active.offsetWidth; // Reflow
+    active.classList.replace('active', 'exiting');
+    active.addEventListener('animationend', () => active.remove(), {once:true});
   }
+
   if (b1) {
-    b1.classList.replace('below-1','entering');
-    b1.style.transition=''; b1.style.transform='';
-    b1.addEventListener('animationend',()=>{
-      b1.classList.replace('entering','active');
-      b1.style.transition='none'; b1.style.transform='rotateY(0deg) rotateX(2deg)';
-      b1.addEventListener('click',doFlip);
-      animating=false; updateUI();
-    },{once:true});
-  } else { animating=false; updateUI(); }
+    b1.classList.replace('below-1', 'entering');
+    b1.style.transition = ''; b1.style.transform = '';
+    b1.addEventListener('animationend', () => {
+      b1.classList.replace('entering', 'active');
+      b1.style.transition = 'none'; b1.style.transform = 'rotateY(0deg) rotateX(2deg)';
+      b1.addEventListener('click', doFlip);
+      animating = false; flipped = false;
+      updateUI(); checkCompletion();
+    }, {once:true});
+  } else {
+    animating = false; flipped = false;
+    updateUI(); checkCompletion();
+  }
 
   if (b2) {
-    b2.classList.replace('below-2','below-1');
-    b2.style.transition='transform 0.5s cubic-bezier(0.23,1,0.32,1) 0.15s';
-    b2.style.transform='';
+    b2.classList.replace('below-2', 'below-1');
+    b2.style.transition = 'transform 0.5s cubic-bezier(0.23,1,0.32,1) 0.15s';
+    b2.style.transform = '';
   }
 
-  current++;
-  const newIdx=current+2;
-  if (newIdx<CARDS.length) {
-    const nc=buildCardWrap(newIdx,'below-2');
-    nc.style.opacity='0'; scene.appendChild(nc);
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{ nc.style.transition='opacity 0.3s ease 0.2s'; nc.style.opacity=''; }));
-  }
-
-  if (current===CARDS.length-1) {
-    setTimeout(()=>{ doneMsg.classList.add('visible'); scene.style.display='none'; },1200);
+  if (reviewQueue.length >= 3) {
+    const nc = buildCardWrap(reviewQueue[2], 'below-2');
+    nc.style.opacity = '0'; scene.appendChild(nc);
+    requestAnimationFrame(() => requestAnimationFrame(() => { nc.style.transition = 'opacity 0.3s ease 0.2s'; nc.style.opacity = ''; }));
   }
 }
+
+function checkCompletion() {
+  if (reviewQueue.length === 0) {
+    scene.style.display = 'none';
+    document.getElementById('controls').style.display = 'none';
+    correctPileInd.style.opacity = '0';
+    retryPileInd.style.opacity = '0';
+    
+    document.getElementById('doneStats').innerHTML = `<span class="green">${correctPile.length} mastered</span> &middot; <span class="red">${retryPile.length} to review</span>`;
+    
+    const continueBtn = document.getElementById('continueReviewBtn');
+    if (retryPile.length > 0) {
+       continueBtn.textContent = 'Review incorrect cards \u2192';
+       continueBtn.style.display = 'block';
+    } else {
+       continueBtn.style.display = 'none';
+       document.getElementById('doneStats').innerHTML = `<span class="green">100% Mastered</span> &middot; Great job!`;
+    }
+    
+    doneMsg.classList.add('visible');
+  }
+}
+
+document.getElementById('continueReviewBtn').addEventListener('click', () => {
+  reviewQueue = [...retryPile];
+  retryPile = [];
+  storageSaveSession();
+  doneMsg.classList.remove('visible');
+  scene.style.display = '';
+  document.getElementById('controls').style.display = 'flex';
+  render();
+});
+
+// Event Listeners for Rating
+document.getElementById('gotItBtn').addEventListener('click', () => doRate(true));
+document.getElementById('reviewBtn').addEventListener('click', () => doRate(false));
+flipBtn.addEventListener('click', doFlip);
 
 // Mouse tilt
 document.addEventListener('mousemove', e => {
@@ -1107,12 +933,12 @@ document.addEventListener('mouseleave', () => {
 // Keyboard
 document.addEventListener('keydown', e => {
   if (document.getElementById('studyScreen').classList.contains('hidden')) return;
-  if (e.key==='ArrowRight'||e.key===' ') { e.preventDefault(); doNext(); }
-  if (e.key==='f'||e.key==='F') doFlip();
+  if (!flipped && (e.key==='f'||e.key==='F'||e.key===' ')) { e.preventDefault(); doFlip(); return; }
+  if (flipped) {
+      if (e.key==='1') { doRate(false); }
+      if (e.key==='2' || e.key===' ') { e.preventDefault(); doRate(true); }
+  }
 });
-
-flipBtn.addEventListener('click', doFlip);
-nextBtn.addEventListener('click', doNext);
 </script>
 </body>
 </html>
