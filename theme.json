@@ -1,0 +1,62 @@
+[
+  {
+    "id": "classic",
+    "name": "Classic",
+    "desc": "Warm fractal grain, multiply blend",
+    "bg": "linear-gradient(160deg, #fdfaf3 0%, #f7f2e6 40%, #f2ead8 100%)",
+    "inkDark": "#1a1510",
+    "inkLabel": "#8a7a62",
+    "edgeLeft": "#e8e0cc",
+    "edgeRight": "#c9bfa3"
+  },
+  {
+    "id": "linen",
+    "name": "Fine Linen",
+    "desc": "CSS woven weave, no filter",
+    "bg": "linear-gradient(160deg, #faf6ec 0%, #f2ebe0 50%, #ede4d4 100%)",
+    "inkDark": "#1a1510",
+    "inkLabel": "#8a7a62",
+    "edgeLeft": "#e0d8c0",
+    "edgeRight": "#c8beaa"
+  },
+  {
+    "id": "watercolour",
+    "name": "Watercolour",
+    "desc": "Low-frequency noise, blotchy patches",
+    "bg": "linear-gradient(135deg, #faf6ec 0%, #f0e8d8 100%)",
+    "inkDark": "#1a1510",
+    "inkLabel": "#8a7a62",
+    "edgeLeft": "#e0d8c0",
+    "edgeRight": "#c8beaa"
+  },
+  {
+    "id": "newsprint",
+    "name": "Newsprint",
+    "desc": "Fine high-freq grain, aged amber tone",
+    "bg": "linear-gradient(170deg, #ede5c6 0%, #e4d9b4 55%, #ddd0a8 100%)",
+    "inkDark": "#1a1508",
+    "inkLabel": "#4a3a18",
+    "edgeLeft": "#cfc090",
+    "edgeRight": "#b0a070"
+  },
+  {
+    "id": "vellum",
+    "name": "Vellum",
+    "desc": "Screen blend, near-translucent feel",
+    "bg": "linear-gradient(160deg, rgba(255,255,252,0.97) 0%, rgba(248,248,242,0.95) 40%, rgba(242,242,234,0.93) 100%)",
+    "inkDark": "#1a1a14",
+    "inkLabel": "#5a5a48",
+    "edgeLeft": "#e0e0d8",
+    "edgeRight": "#c8c8c0"
+  },
+  {
+    "id": "kraft",
+    "name": "Kraft",
+    "desc": "Brown bag texture, turbulence filter",
+    "bg": "linear-gradient(160deg, #cdb07a 0%, #c0a068 40%, #b49058 100%)",
+    "inkDark": "#1a0e00",
+    "inkLabel": "#3a2200",
+    "edgeLeft": "#a88040",
+    "edgeRight": "#8a6428"
+  }
+]
