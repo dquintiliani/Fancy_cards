@@ -1,0 +1,69 @@
+/* tokens.css */
+:root {
+  /* layout */
+  --card-w: 420px;
+  --card-h: 270px;
+
+  /* base colors (raw materials) */
+  --color-ink-dark: #ffffff;
+  --color-ink-muted: #8a7a62;
+  --color-bg-desk: #1b1b1b;
+  --color-gold-soft: rgba(250, 240, 210, 0.65);
+  --color-gold-border-soft: rgba(250, 240, 210, 0.18);
+
+  --color-accent-success: #a0d28c;
+  --color-accent-danger: #d28c8c;
+
+  /* legacy ink & gold (to be deprecated) */
+  --ink-dark: #69492a;
+  --ink-light: #8a7a62;
+  --rule-line: rgba(100,90,70,0.15);
+  --desk: #2a2318;
+  --gold-dim: rgba(250,240,210,0.65);
+  --gold-border: rgba(250,240,210,0.18);
+
+  /* semantic colors */
+  --color-bg-page: var(--color-bg-desk);
+  --color-bg-card: #231d14;
+  --color-text-primary: var(--color-ink-dark);
+  --color-text-muted: var(--color-ink-muted);
+  --color-border-subtle: var(--color-gold-border-soft);
+  --color-border-strong: rgba(0,0,0,0.6);
+
+  /* typography */
+  --font-family-serif: 'Crimson Pro', Georgia, serif;
+  --font-family-mono: 'DM Mono', monospace;
+
+  --font-size-xs: 9px;
+  --font-size-sm: 11px;
+  --font-size-md: 13px;
+  --font-size-lg: 18px;  /* new intermediate */
+  --font-size-xl: 32px;
+  --font-size-2xl: 40px;
+
+  /* spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px; /* great for hero/card stack */
+
+  /* radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* shadows */
+  --shadow-card-soft:
+    -1px -1px 0 rgba(255,255,255,0.8),
+     1px  1px 0 rgba(100,85,60,0.25),
+     0  4px 10px rgba(0,0,0,0.20),
+     0 16px 36px rgba(0,0,0,0.26);
+
+  /* motion */
+  --duration-fast: 0.15s;
+  --duration-med: 0.45s;
+  --duration-slow: 0.75s;
+  --easing-standard: cubic-bezier(0.23, 1, 0.32, 1);
+}

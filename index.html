@@ -56,8 +56,22 @@
   <div class="screen" id="uploadScreen">
     <div class="upload-shell">
       <div style="text-align:center">
-        <div class="upload-wordmark">Flashcard Studio</div>
-        <h1 class="upload-headline">Drop your deck.<br><em>Study anything.</em></h1>
+        <div class="upload-wordmark">Welcome to Fancy Cards</div>
+
+<h1 class="hero-heading">
+  <span class="hero-heading__line hero-heading__line--primary">
+    Study anything
+  </span>
+  <span class="hero-heading__line hero-heading__line--secondary">
+    <span class="hero-heading__wrong">
+      Now with AI!
+    </span>
+    <span class="hero-heading__right">
+      Without the noise
+    </span>
+  </span>
+</h1>
+
       </div>
       <div class="saved-banner" id="savedBanner" style="display:none">
         <div class="saved-banner-left">
@@ -70,6 +84,16 @@
           <button class="banner-btn discard" id="discardBtn">Replace</button>
         </div>
       </div>
+      <p>
+        Hover over this
+        <span class="tooltip">
+          info
+          <span class="tooltip-content">
+            test
+          </span>
+        </span>
+        to see more details.
+      </p>
       <div class="dropzone" id="dropzone">
         <input type="file" id="fileInput" accept=".csv,.xlsx,.xls">
         <svg class="dz-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -153,6 +177,17 @@
     </div>
   </div>
   <script src="script.js" defer></script>
+  <script>
+  window.addEventListener('load', function () {
+    var heading = document.querySelector('.hero-heading');
+    if (heading) {
+      requestAnimationFrame(function () {
+        heading.classList.add('hero-heading--animated');
+      });
+    }
+  });
+</script>
+
 </body>
 
 </html>

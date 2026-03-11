@@ -2,6 +2,7 @@ const THEME_KEY = 'flashcard_theme';
 
 let THEMES = null; // global-ish so other code in this file can see it
 
+//Import the themes from themes.json
 fetch("theme.json")
   .then((res) => res.json())
   .then((data) => {
