@@ -1114,26 +1114,34 @@ border-radius: 0 2px 2px 0;
 .hero-heading__wrong::after {
   content: "";
   position: absolute;
-  left: -0.05em;
-  right: -0.05em;
+  left: -0.08em;
+  right: -0.08em;
   top: 55%;
-  height: 2px;
+  height: 4px; /* was 2px: thicker stroke */
+
   background:
     linear-gradient(
       to right,
-      rgba(180, 40, 40, 0) 0%,
-      rgba(210, 60, 60, 0.5) 10%,
-      rgba(230, 70, 70, 0.9) 50%,
-      rgba(210, 60, 60, 0.5) 90%,
-      rgba(180, 40, 40, 0) 100%
+      rgba(160, 30, 30, 0) 0%,
+      rgba(200, 40, 40, 0.7) 12%,
+      rgba(230, 60, 60, 1) 50%,
+      rgba(200, 40, 40, 0.7) 88%,
+      rgba(160, 30, 30, 0) 100%
     );
+
   border-radius: 999px;
+  background-blend-mode: multiply;
+
+  /* a bit more glow + fuzz to feel like waxy pencil/marker */
   box-shadow:
-    0 0 0.5px rgba(120, 20, 20, 0.4),
-    0 0.5px 0 rgba(0, 0, 0, 0.25);
-  transform: rotate(-2deg);
+    0 0 1px rgba(120, 20, 20, 0.7),
+    0 1px 0 rgba(0, 0, 0, 0.35),
+    0 -0.5px 0 rgba(0, 0, 0, 0.25);
+
+
   pointer-events: none;
 }
+
 
 /* New calm heading */
 .hero-heading__right {
