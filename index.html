@@ -126,11 +126,12 @@
   <div class="screen hidden" id="themeScreen">
     <div class="theme-shell">
       <div class="theme-header">
-        <div class="theme-eyebrow">Step 2 of 2</div>
+        <div class="theme-eyebrow">Step 2 of 2 &mdash; paper &amp; study options</div>
         <h2 class="theme-headline">Pick your <em>paper.</em></h2>
         <div class="theme-sub">Saved as your default &middot; change anytime during practice</div>
       </div>
       <div class="theme-grid" id="themeGrid"></div>
+      <div class="settings-panel" id="settingsPanel"></div>
       <div class="theme-cta">
         <button class="theme-confirm-btn" id="themeConfirmBtn">Start Studying &#x2192;</button>
         <button class="theme-back-btn" id="themeBackBtn">&#x2190; Back</button>
@@ -167,17 +168,7 @@
       <button class="ctrl-btn theme-btn" id="changeThemeBtn">&#x25A1; Paper</button>
     </div>
   </div>
-  <script src="script.js" defer></script>
-  <script>
-  window.addEventListener('load', function () {
-    var heading = document.querySelector('.hero-heading');
-    if (heading) {
-      requestAnimationFrame(function () {
-        heading.classList.add('hero-heading--animated');
-      });
-    }
-  });
-</script>
+  <script type="module" src="js/main.js"></script>
 
 </body>
 
